@@ -11,8 +11,9 @@ void swap(int* a, int* b)
 	
 }
 
-void sort(int *n, int *v)
+void sort(int n, int *v)
 {
+	int q = 0;
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 1; j < n; j++)
@@ -22,9 +23,12 @@ void sort(int *n, int *v)
 			{
 					swap(&v[j],&v[j-1]);
 			}
+			q++;
 		}
 
 	}
+	printf("Kolichestvo sravnenii:");
+	printf("%d\n", q);
 }
 
 
@@ -48,4 +52,5 @@ int main()
 	{
 	printf("%d ", v[i]);
 	}
+	free(n);
 }
